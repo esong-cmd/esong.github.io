@@ -3,194 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Elaina Song | Mechanical Engineering Portfolio</title>
-  <style>
-    :root {
-      --bg: #0b1120;
-      --surface: #162032;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --border: #26354d;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    header { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
-    h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
-    .subtitle { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin: 0.25rem 0 1rem; }
-    .bio { color: var(--muted); max-width: 700px; margin-bottom: 1.5rem; }
-    .links a {
-      display: inline-block;
-      color: var(--text);
-      text-decoration: none;
-      border: 1px solid var(--border);
-      padding: 0.45rem 1rem;
-      border-radius: 6px;
-      margin: 0 0.5rem 0.5rem 0;
-      font-size: 0.9rem;
-    }
-    .links a:hover { border-color: var(--accent); color: var(--accent); }
-    .skills-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
-    }
-    .skills-bar strong { color: var(--accent); display: block; margin-bottom: 0.25rem; }
-    .skills-bar span { color: var(--muted); }
-    section { padding: 2.5rem 0; }
-    h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.75rem;
-    }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .card-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      background: #0f172a;
-      border-bottom: 1px solid var(--border);
-      display: block;
-    }
-    .card-body { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
-    .card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem; }
-    .specs {
-      font-size: 0.85rem;
-      color: #cbd5e1;
-      background: rgba(11, 17, 32, 0.6);
-      padding: 0.75rem;
-      border-radius: 6px;
-      margin-bottom: 1rem;
-      border-left: 3px solid var(--accent);
-    }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
-    .tag {
-      font-size: 0.75rem;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--accent);
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-    }
-    .card-links a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-right: 1rem;
-    }
-    .card-links a:hover { text-decoration: underline; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 2rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-      text-align: center;
-    }
-  </style>
+  <title>Your Name | Mechanical Engineer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Elaina Song</h1>
-    <p class="subtitle">Mechanical Engineer | Machine Design, FEA & Prototyping</p>
-    <p class="bio">
-      Mechanical engineering graduate focused on DFM (Design for Manufacturing), structural simulation, and electro-mechanical systems from initial CAD to physical validation.
-    </p>
-    <div class="links">
-      <a href="resume.pdf" target="_blank">Resume (PDF)</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="mailto:you@example.com">Email</a>
+  <nav>
+    <a href="index.html" class="nav-brand">Your Name</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
     </div>
-  </header>
+  </nav>
 
-  <div class="skills-bar">
+  <section class="about-hero">
     <div>
-      <strong>CAD & Simulation</strong>
-      <span>SolidWorks (CSWA/CSWP), Fusion 360, ANSYS Mechanical, GD&T (ASME Y14.5)</span>
+      <h1>Your Name</h1>
+      <p class="subtitle">Mechanical Engineer | Product Design, FEA & Manufacturing</p>
+      <p>
+        I am a mechanical engineer specializing in end-to-end hardware development—from parametric CAD modeling and structural simulation to hands-on CNC machining and physical validation.
+      </p>
+      <p>
+        My work focuses on designing reliable electro-mechanical assemblies, optimizing parts for manufacturability (DFM), and testing prototypes against real-world load and thermal constraints.
+      </p>
+      <div class="btn-group">
+        <a href="projects.html" class="btn btn-primary">View Engineering Projects →</a>
+        <a href="resume.pdf" target="_blank" class="btn">Resume (PDF)</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn">LinkedIn</a>
+        <a href="mailto:you@example.com" class="btn">Email Me</a>
+      </div>
     </div>
-    <div>
-      <strong>Manufacturing</strong>
+    <img src="assets/profile.jpg" alt="Your Name" class="profile-img" />
+  </section>
+
+  <h2>Technical Skills & Fabrication</h2>
+  <div class="skills-grid">
+    <div class="skill-box">
+      <strong>CAD & Drafting</strong>
+      <span>SolidWorks (CSWA/CSWP), Fusion 360, Creo, GD&T (ASME Y14.5), Tolerance Stack-ups</span>
+    </div>
+    <div class="skill-box">
+      <strong>Simulation & Analysis</strong>
+      <span>ANSYS Mechanical (Static/Modal/Thermal FEA), SolidWorks Simulation, CFD Basics</span>
+    </div>
+    <div class="skill-box">
+      <strong>Manufacturing & Shop</strong>
       <span>3-Axis CNC Milling, Manual Lathe, FDM/SLA 3D Printing, Sheet Metal, Laser Cutting</span>
     </div>
-    <div>
-      <strong>Controls & Testing</strong>
-      <span>MATLAB, Python, Arduino/STM32, Strain Gauges, Instron Testing</span>
+    <div class="skill-box">
+      <strong>Testing & Controls</strong>
+      <span>MATLAB, Python, Arduino/STM32, Data Acquisition (DAQ), Strain Gauges</span>
     </div>
   </div>
 
-  <section>
-    <h2>Engineering Projects</h2>
-    <div class="grid">
+  <h2>Education & Experience</h2>
+  <div class="timeline-item">
+    <strong>B.S. in Mechanical Engineering — Your University</strong>
+    <div class="timeline-meta">Expected May 2026 | GPA: 3.X / 4.0</div>
+    <p>Relevant Coursework: Machine Design, Heat Transfer, Mechanics of Materials, Manufacturing Processes, Control Systems.</p>
+  </div>
 
-      <!-- PROJECT 1 -->
-      <article class="card">
-        <img src="assets/project1.jpg" alt="Project 1 CAD or Prototype" class="card-img" />
-        <div class="card-body">
-          <div>
-            <h3>Project 1 Title</h3>
-            <p>Brief 2-sentence overview of the mechanical problem, your role, and how you designed/built it.</p>
-            <div class="specs">
-              <strong>Key Metrics:</strong> Safety factor of 2.4 under 500 N load; machined from 6061-T6 aluminum; reduced part count by 35%.
-            </div>
-            <div class="tags">
-              <span class="tag">SolidWorks</span>
-              <span class="tag">ANSYS FEA</span>
-              <span class="tag">CNC Machining</span>
-            </div>
-          </div>
-          <div class="card-links">
-            <a href="assets/project1-report.pdf" target="_blank">Design Report (PDF) →</a>
-            <a href="assets/project1-drawings.pdf" target="_blank">2D Drawings →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 2 -->
-      <article class="card">
-        <img src="assets/project2.jpg" alt="Project 2 CAD or Prototype" class="card-img" />
-        <div class="card-body">
-          <div>
-            <h3>Project 2 Title</h3>
-            <p>Brief 2-sentence overview of the mechanism, thermal system, or robotics assembly.</p>
-            <div class="specs">
-              <strong>Key Metrics:</strong> Add your key numbers (torque, thermal drop, weight savings, tolerance, cost).
-            </div>
-            <div class="tags">
-              <span class="tag">Fusion 360</span>
-              <span class="tag">3D Printing</span>
-              <span class="tag">MATLAB</span>
-            </div>
-          </div>
-          <div class="card-links">
-            <a href="#" target="_blank">View Details →</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
+  <div class="timeline-item">
+    <strong>Mechanical Design Member — Formula SAE / Robotics Team / Internship</strong>
+    <div class="timeline-meta">Month Year – Month Year</div>
+    <p>Designed, simulated, and machined suspension/chassis components; reduced assembly mass by XX% while meeting stiffness targets.</p>
+  </div>
 
   <footer>
     Hosted on GitHub Pages
