@@ -1,15 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Rivera | Engineering Portfolio</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+    .subtitle { color: var(--accent); font-weight: 600; margin: 0.25rem 0 1rem; }
+    .bio { color: var(--muted); max-width: 650px; margin-bottom: 1.5rem; }
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .links a:hover { border-color: var(--accent); color: var(--accent); }
+    section { padding: 3rem 0; }
+    h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .metrics {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      background: rgba(15, 23, 42, 0.5);
+      padding: 0.6rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .tag {
+      font-size: 0.75rem;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+    }
+    .card-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-right: 1rem;
+    }
+    .card-links a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>My website is live on GitHub Pages.</p>
+
+  <header>
+    <h1>Alex Rivera</h1>
+    <p class="subtitle">Mechanical & Robotics Engineer</p>
+    <p class="bio">
+      Focused on embedded control systems, CAD/FEA structural optimization, and autonomous hardware prototyping.
+    </p>
+    <div class="links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="resume.pdf" target="_blank">Resume (PDF)</a>
+      <a href="mailto:you@example.com">Email</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Featured Engineering Projects</h2>
+    <div class="grid">
+
+      <!-- Project 1 -->
+      <article class="card">
+        <div>
+          <h3>Autonomous LiDAR Rover</h3>
+          <p>Designed a 4-wheel differential drive chassis and ROS 2 navigation stack for indoor mapping.</p>
+          <div class="metrics">
+            <strong>Result:</strong> Achieved ±2 cm localization accuracy at 1.2 m/s with 4-hour battery runtime.
+          </div>
+          <div class="tags">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">C++ / ROS 2</span>
+            <span class="tag">STM32</span>
+            <span class="tag">PCB Design</span>
+          </div>
+        </div>
+        <div class="card-links">
+          <a href="#">GitHub Repo →</a>
+          <a href="#">CAD & Test Report →</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card">
+        <div>
+          <h3>Topology-Optimized Drone Frame</h3>
+          <p>Reduced quadcopter frame mass while maintaining stiffness under 4G maneuvering loads.</p>
+          <div class="metrics">
+            <strong>Result:</strong> 28% weight reduction (142g to 102g) validated via ANSYS FEA and physical drop tests.
+          </div>
+          <div class="tags">
+            <span class="tag">ANSYS FEA</span>
+            <span class="tag">Fusion 360</span>
+            <span class="tag">Carbon Fiber</span>
+          </div>
+        </div>
+        <div class="card-links">
+          <a href="#">Case Study →</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card">
+        <div>
+          <h3>Real-Time Telemetry Dashboard</h3>
+          <p>Built a low-latency serial-to-web telemetry visualizer for static rocket motor test stands.</p>
+          <div class="metrics">
+            <strong>Result:</strong> Streamed 1,000 Hz load-cell and pressure data with &lt;15 ms UI latency.
+          </div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">WebSockets</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="card-links">
+          <a href="#">GitHub Repo →</a>
+          <a href="#">Live Demo →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    Built and hosted on GitHub Pages.
+  </footer>
+
 </body>
 </html>
