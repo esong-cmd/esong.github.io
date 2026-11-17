@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Rivera | Engineering Portfolio</title>
+  <title> Elaina Song | Mechanical Engineering Portfolio</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --text: #f8fafc;
+      --bg: #0b1120;
+      --surface: #162032;
+      --text: #f1f5f9;
       --muted: #94a3b8;
       --accent: #38bdf8;
-      --border: #334155;
+      --border: #26354d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -19,57 +19,78 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
     }
-    header { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    header { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
     h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
-    .subtitle { color: var(--accent); font-weight: 600; margin: 0.25rem 0 1rem; }
-    .bio { color: var(--muted); max-width: 650px; margin-bottom: 1.5rem; }
+    .subtitle { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin: 0.25rem 0 1rem; }
+    .bio { color: var(--muted); max-width: 700px; margin-bottom: 1.5rem; }
     .links a {
+      display: inline-block;
       color: var(--text);
       text-decoration: none;
       border: 1px solid var(--border);
-      padding: 0.4rem 0.9rem;
+      padding: 0.45rem 1rem;
       border-radius: 6px;
-      margin-right: 0.5rem;
+      margin: 0 0.5rem 0.5rem 0;
       font-size: 0.9rem;
     }
     .links a:hover { border-color: var(--accent); color: var(--accent); }
-    section { padding: 3rem 0; }
+    .skills-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .skills-bar strong { color: var(--accent); display: block; margin-bottom: 0.25rem; }
+    .skills-bar span { color: var(--muted); }
+    section { padding: 2.5rem 0; }
     h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
     }
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 1.5rem;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #0f172a;
+      border-bottom: 1px solid var(--border);
+      display: block;
+    }
+    .card-body { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
     .card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
-    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
-    .metrics {
+    .card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem; }
+    .specs {
       font-size: 0.85rem;
       color: #cbd5e1;
-      background: rgba(15, 23, 42, 0.5);
-      padding: 0.6rem;
+      background: rgba(11, 17, 32, 0.6);
+      padding: 0.75rem;
       border-radius: 6px;
       margin-bottom: 1rem;
+      border-left: 3px solid var(--accent);
     }
     .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
     .tag {
       font-size: 0.75rem;
-      background: rgba(56, 189, 248, 0.15);
+      background: rgba(56, 189, 248, 0.12);
       color: var(--accent);
       padding: 0.2rem 0.6rem;
-      border-radius: 999px;
+      border-radius: 4px;
     }
     .card-links a {
       color: var(--accent);
@@ -91,80 +112,80 @@
 <body>
 
   <header>
-    <h1>Alex Rivera</h1>
-    <p class="subtitle">Mechanical & Robotics Engineer</p>
+    <h1>Elaina Song</h1>
+    <p class="subtitle">Mechanical Engineer | Machine Design, FEA & Prototyping</p>
     <p class="bio">
-      Focused on embedded control systems, CAD/FEA structural optimization, and autonomous hardware prototyping.
+      Mechanical engineering graduate focused on DFM (Design for Manufacturing), structural simulation, and electro-mechanical systems from initial CAD to physical validation.
     </p>
     <div class="links">
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
       <a href="resume.pdf" target="_blank">Resume (PDF)</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
       <a href="mailto:you@example.com">Email</a>
     </div>
   </header>
 
+  <div class="skills-bar">
+    <div>
+      <strong>CAD & Simulation</strong>
+      <span>SolidWorks (CSWA/CSWP), Fusion 360, ANSYS Mechanical, GD&T (ASME Y14.5)</span>
+    </div>
+    <div>
+      <strong>Manufacturing</strong>
+      <span>3-Axis CNC Milling, Manual Lathe, FDM/SLA 3D Printing, Sheet Metal, Laser Cutting</span>
+    </div>
+    <div>
+      <strong>Controls & Testing</strong>
+      <span>MATLAB, Python, Arduino/STM32, Strain Gauges, Instron Testing</span>
+    </div>
+  </div>
+
   <section>
-    <h2>Featured Engineering Projects</h2>
+    <h2>Engineering Projects</h2>
     <div class="grid">
 
-      <!-- Project 1 -->
+      <!-- PROJECT 1 -->
       <article class="card">
-        <div>
-          <h3>Autonomous LiDAR Rover</h3>
-          <p>Designed a 4-wheel differential drive chassis and ROS 2 navigation stack for indoor mapping.</p>
-          <div class="metrics">
-            <strong>Result:</strong> Achieved ±2 cm localization accuracy at 1.2 m/s with 4-hour battery runtime.
+        <img src="assets/project1.jpg" alt="Project 1 CAD or Prototype" class="card-img" />
+        <div class="card-body">
+          <div>
+            <h3>Project 1 Title</h3>
+            <p>Brief 2-sentence overview of the mechanical problem, your role, and how you designed/built it.</p>
+            <div class="specs">
+              <strong>Key Metrics:</strong> Safety factor of 2.4 under 500 N load; machined from 6061-T6 aluminum; reduced part count by 35%.
+            </div>
+            <div class="tags">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">ANSYS FEA</span>
+              <span class="tag">CNC Machining</span>
+            </div>
           </div>
-          <div class="tags">
-            <span class="tag">SolidWorks</span>
-            <span class="tag">C++ / ROS 2</span>
-            <span class="tag">STM32</span>
-            <span class="tag">PCB Design</span>
+          <div class="card-links">
+            <a href="assets/project1-report.pdf" target="_blank">Design Report (PDF) →</a>
+            <a href="assets/project1-drawings.pdf" target="_blank">2D Drawings →</a>
           </div>
-        </div>
-        <div class="card-links">
-          <a href="#">GitHub Repo →</a>
-          <a href="#">CAD & Test Report →</a>
         </div>
       </article>
 
-      <!-- Project 2 -->
+      <!-- PROJECT 2 -->
       <article class="card">
-        <div>
-          <h3>Topology-Optimized Drone Frame</h3>
-          <p>Reduced quadcopter frame mass while maintaining stiffness under 4G maneuvering loads.</p>
-          <div class="metrics">
-            <strong>Result:</strong> 28% weight reduction (142g to 102g) validated via ANSYS FEA and physical drop tests.
+        <img src="assets/project2.jpg" alt="Project 2 CAD or Prototype" class="card-img" />
+        <div class="card-body">
+          <div>
+            <h3>Project 2 Title</h3>
+            <p>Brief 2-sentence overview of the mechanism, thermal system, or robotics assembly.</p>
+            <div class="specs">
+              <strong>Key Metrics:</strong> Add your key numbers (torque, thermal drop, weight savings, tolerance, cost).
+            </div>
+            <div class="tags">
+              <span class="tag">Fusion 360</span>
+              <span class="tag">3D Printing</span>
+              <span class="tag">MATLAB</span>
+            </div>
           </div>
-          <div class="tags">
-            <span class="tag">ANSYS FEA</span>
-            <span class="tag">Fusion 360</span>
-            <span class="tag">Carbon Fiber</span>
+          <div class="card-links">
+            <a href="#" target="_blank">View Details →</a>
           </div>
-        </div>
-        <div class="card-links">
-          <a href="#">Case Study →</a>
-        </div>
-      </article>
-
-      <!-- Project 3 -->
-      <article class="card">
-        <div>
-          <h3>Real-Time Telemetry Dashboard</h3>
-          <p>Built a low-latency serial-to-web telemetry visualizer for static rocket motor test stands.</p>
-          <div class="metrics">
-            <strong>Result:</strong> Streamed 1,000 Hz load-cell and pressure data with &lt;15 ms UI latency.
-          </div>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">WebSockets</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-        <div class="card-links">
-          <a href="#">GitHub Repo →</a>
-          <a href="#">Live Demo →</a>
         </div>
       </article>
 
@@ -172,7 +193,7 @@
   </section>
 
   <footer>
-    Built and hosted on GitHub Pages.
+    Hosted on GitHub Pages
   </footer>
 
 </body>
